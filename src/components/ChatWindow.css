@@ -1,0 +1,53 @@
+
+.chat-window {
+  flex-grow: 1;
+  padding: var(--spacing-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); /* Consistent gap between messages */
+  background-color: var(--chat-bg);
+  transition: background-color 0.3s ease;
+}
+
+.chat-message {
+  max-width: 75%; /* Allow messages to be a bit wider */
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 18px; /* Slightly more rounded */
+  word-wrap: break-word;
+  line-height: 1.5; /* Better readability */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadow for messages */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+  background-color: var(--user-message-bg);
+  color: var(--user-message-text);
+  border-bottom-right-radius: 6px; /* A bit sharper on one corner */
+}
+
+.chat-message.ai {
+  align-self: flex-start;
+  background-color: var(--ai-message-bg);
+  color: var(--ai-message-text);
+  border-bottom-left-radius: 6px; /* A bit sharper on one corner */
+}
+
+/* Scrollbar Modernization (for Webkit browsers) */
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: var(--chat-bg);
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: #bec0c2;
+  border-radius: 4px;
+}
+
+body.dark-mode .chat-window::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
