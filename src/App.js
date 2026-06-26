@@ -48,7 +48,7 @@ function App() {
     const API_KEY = process.env.REACT_APP_API_KEY;
 
     const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-05-20" }); 
+    const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash" }); 
 
     try {
       const result = await model.generateContent(userMessage);
