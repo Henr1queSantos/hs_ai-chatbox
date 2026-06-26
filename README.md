@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# 🤖 HS AI Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek AI-powered chatbox built with React and Google's Gemini API. Chat with a generative AI model directly in your browser, with support for dark/light mode.
 
-## Available Scripts
+🌐 **Live Demo:** [ai.henriquesantos.dev](https://ai.henriquesantos.dev)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📸 Preview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Type a message and get an AI-generated response instantly. Supports dark and light themes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 💬 Conversational chat interface with user and AI message bubbles
+- 🤖 Powered by **Google Gemini API** (`@google/generative-ai`)
+- 🌙 Dark / ☀️ Light mode toggle
+- ⚡ Fast, clean UI with a minimal design
+- 🔄 Graceful error handling when the API is unavailable
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React 19**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **[Google Gemini API](https://ai.google.dev/)** — generative AI responses
+- **gh-pages** for deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🔑 API Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses the [Google Gemini API](https://ai.google.dev/). To run it locally, you'll need a free API key.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Go to [aistudio.google.com](https://aistudio.google.com/) and sign in
+2. Generate an **API Key**
+3. Create a `.env` file at the root of the project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+REACT_APP_GEMINI_API_KEY=your_api_key_here
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> ⚠️ Never commit your `.env` file to version control. It's already listed in `.gitignore`.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+- Node.js (v16+)
+- npm
+- Google Gemini API key (see above)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Installation
 
-### Analyzing the Bundle Size
+```bash
+# Clone the repository
+git clone https://github.com/Henr1queSantos/hs_ai-chatbox.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# Navigate into the project
+cd hs_ai-chatbox
 
-### Making a Progressive Web App
+# Install dependencies
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Running locally
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Deployment
+### Build for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm run build
+```
 
-### `npm run build` fails to minify
+### Deploy to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run deploy
+```
+
+---
+
+## 📁 Project Structure
+
+```
+hs_ai-chatbox/
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.js
+│   └── index.js
+├── .env          ← your API key goes here (not committed)
+├── package.json
+└── README.md
+```
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author
+
+**Henrique Santos**
+
+- Portfolio: [henriquesantos.dev](https://henriquesantos.dev)
+- GitHub: [@Henr1queSantos](https://github.com/Henr1queSantos)
